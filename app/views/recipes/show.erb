@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>New Recipe</title>
+  <title><%= @recipe.name %></title>
 </head>
 <body>
   <h1><%= @recipe.name %></h1>
@@ -9,5 +9,8 @@
   <h3><%= @recipe.ingredients %></h3>
   <h2>Cook Time:</h2>
   <h3><%= @recipe.cook_time %></h3>
+  <form method="POST" action="/recipes/<%= @recipe.id %>">
+    <input type="submit" value="Delete" />
+  </form>
 </body>
 </html>
